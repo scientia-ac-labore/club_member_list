@@ -1,5 +1,9 @@
 <h1>Simple app for adding club members into list.</h1>
 
+Requires Python 3
+
+This app on heroku https://clubmemberslist.herokuapp.com/
+
 <h2>Install</h2>
 
 <code>git clone https://github.com/scientia-ac-labore/club_members_list</code>
