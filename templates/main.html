@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 <title>Club</title>
 <h1>Welcome to the club!</h1>
-<form action="" method="post">
+<form action="/" method="post">
     <fieldset>
         <legend>New member</legend>
     <div>{{ form.name.label }}: {{ form.name }}</div>
     <div>{{ form.email.label }}: {{ form.email }}</div>
-        <input type="submit" value="Save">
-        <input type="reset" value="Clear">
+    <input type="submit" value="Save">
+    <input type="reset" value="Clear">
     </fieldset>
 </form>
 {% for field, errors in form.errors.items() %}
