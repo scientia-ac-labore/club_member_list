@@ -1,4 +1,4 @@
-<h1>Simple app for adding members into list.</h1>
+<h1>Simple app for adding club members into list.</h1>
 
 <h2>Install</h2>
 
