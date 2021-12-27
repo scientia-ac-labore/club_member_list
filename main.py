@@ -2,14 +2,17 @@ from flask import Flask, render_template, request, redirect, url_for
 from datetime import date
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired, Email, Length, Regexp, ValidationError
+import json
 
 app = Flask(__name__)
 
-app_data = {}
-
+with open("data_file.json", "w") as write_file:
+    json.dump({}, write_file)
 
 def my_length_check(_, field):
-    if field.data in app_data:
+    with open("data_file.json", "r") as read_file:
+        app_data = json.load(read_file)
+    if field.data in app_data.keys():
         raise ValidationError('Email already added')
 
 
@@ -22,11 +25,16 @@ class ClubMemberForm(Form):
 
 @app.route("/", methods=['post', 'get'])
 def main():
+    with open("data_file.json", "r") as read_file:
+        app_data = json.load(read_file)
+    print(app_data)
     form = ClubMemberForm(request.form)
     if request.method == 'POST':
         if form.validate():
             email = form.email.data
-            app_data[email] = [form.name.data, date.today()]
+            app_data[email] = [form.name.data, str(date.today())]
+            with open("data_file.json", "w") as wf:
+                json.dump(app_data, wf)
             app.logger.debug('Added new member')
             form = ClubMemberForm()
         else:
