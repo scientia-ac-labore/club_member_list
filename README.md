@@ -8,6 +8,12 @@
 
 <code>python3 -m venv env</code>
 
+For Windows
+
+<code>path\env\Scripts\activate.bat</code>
+  
+For Linux
+  
 <code>source env/bin/activate</code>
 
 <code>pip install -r requirements.txt</code>
