@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from datetime import date
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired, Email, Length, Regexp, ValidationError
@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 with open("data_file.json", "w") as write_file:
     json.dump({}, write_file)
+
 
 def my_length_check(_, field):
     with open("data_file.json", "r") as read_file:

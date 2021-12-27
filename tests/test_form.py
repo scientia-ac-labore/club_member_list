@@ -1,6 +1,9 @@
+import path
 import sys
 
-sys.path.append('../Go')
+directory = path.Path(__file__).abspath()
+
+sys.path.append(directory.parent.parent)
 
 from main import app, ClubMemberForm
 
