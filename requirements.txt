@@ -3,3 +3,5 @@ WTForms~=3.0.1
 python-dotenv
 email_validator
 gunicorn~=20.1.0
+path
+pytest
