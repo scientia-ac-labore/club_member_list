@@ -28,7 +28,7 @@ def main():
             email = form.email.data
             app_data[email] = [form.name.data, date.today()]
             app.logger.debug('Added new member')
-            return redirect(url_for('main'))
+            form = ClubMemberForm()
         else:
             app.logger.debug(f'Error. Field {list(form.errors.keys())[0]}. Message {list(form.errors.values())[0][0]}')
     return render_template('main.html', data=app_data, form=form)
