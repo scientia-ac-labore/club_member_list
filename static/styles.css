@@ -1,0 +1,92 @@
+body {
+    height:100%;
+    background:#78a7ba;
+}
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF0F1;
+    border: 1px solid #999;
+    margin: 10px;
+}
+form label {
+    color:#1BBA93;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #666;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+  margin: 10px;
+}
+
+input[type="submit"] {
+    padding:10px 20px;
+    background-color: #1BBA93;
+    font-size:17px;
+    border:none;
+    border-radius:5px;
+    color:#bcf5e7;
+    cursor:pointer;
+}
+
+input[type="reset"] {
+    padding:10px 20px;
+    background-color: #808080;
+    font-size:17px;
+    border:none;
+    border-radius:5px;
+    color:#bcf5e7;
+    cursor:pointer;
+}
+
+table {
+	border: 1px solid #eee;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 20px;
+}
+table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+table td{
+	padding: 5px 10px;
+	border: 1px solid #eee;
+	text-align: center;
+}
+table tbody tr:nth-child(odd){
+	background: #fff;
+}
+table tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+
+.error {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+			border: 1px solid;
+			margin: 10px 0px;
+			padding: 15px 10px;
+			background-repeat: no-repeat;
+			background-position: 10px center;
+			color: #D8000C;
+			background-color: #FFBABA;
+		}
